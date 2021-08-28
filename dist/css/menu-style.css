@@ -1,0 +1,238 @@
+
+/** No ©copyright issues **/
+/** But we will be happy to see you whenever you use our code(^_^) **/
+/** Designed by @BlackX-Lolipop **/
+/** Content available by @BlackX-732 **/
+/** Content available @ https://github.com/BlackX-732/AwesomeMenu **/
+/** Version 21.2.7 **/
+/** https://facebook.com/BlackX-732 **/
+/** https://twitter.com/ **/
+
+
+
+    /* Prevent default design start */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+        /* Prevent default design end */
+
+body{
+    background: #fff;
+}
+
+        /**Header design start**/
+
+.wrapper .header{
+    
+    background: #ff2051;
+    position: fixed;
+    width: calc(100% - 0%);/*If we increase .sidebar width from 250px to greater it will be improve automatically*/
+    height: 50px;
+    display: flex;
+    top: 0;
+}
+
+.wrapper .header .header-menu{
+    width: 100%;
+    height: calc(100%-0%); /*Adjust .header-menu from top to bottom into .header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.wrapper .header .header-menu .title{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: 0.3s;
+    transition-property: color;
+}
+.wrapper .header .header-menu .title-hide{
+    color: #000;
+    font-family: monospace;
+}
+.wrapper .header .header-menu .title span .sec-span{
+    color: #4CCEE8;
+    font-family: cursive;
+}
+.wrapper .header .header-menu .sidebar-btn{
+    color: #fff;
+    position: absolute;
+    margin-left: 240px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+}
+.wrapper .header .header-menu .sidebar-btn:hover{
+    color: #4CCEE8;
+}
+.wrapper .header .header-menu ul{
+    display: flex;
+    float: right;
+}
+.wrapper .header .header-menu ul li a{
+    background: #fff;
+    color: #000;
+    display: block;
+    margin-right: 0 10px;
+    font-size: 18px;
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    transition-property: background,color;
+}
+
+.wrapper .header .header-menu ul li a:hover{
+    background: #4CCEE8;
+    color: #fff;
+}
+        /**Header design end**/
+        /**Sidebar design start**/
+
+.wrapper .sidebar{
+    z-index: 1; /* indexing sidebar @ z direction */
+    background: #ff2051;
+    position: fixed;
+    top: 50px;
+    width: 250px;
+    height: 100%; /* 100% is for perfect scrolling.But we can use height: calc(100%-0%);*/
+    padding-bottom: 50px; /* extra padding-bottom to see menu clearly */
+    transition: 0.3s;
+    transition-property: width;
+    overflow-y: auto;
+}
+.wrapper .sidebar .sidebar-menu{
+    overflow: hidden;
+}
+.wrapper .sidebar .sidebar-menu img{
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.wrapper .sidebar .sidebar-menu .profile p{
+    color: #bbb;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item{
+    width: 250px;
+    overflow: hidden;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn{
+    display: block;
+    color: #fff;
+    position: relative;
+    padding: 25px 20px;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+    color: #4CCEE8;
+}
+
+.wrapper .sidebar .sidebar-menu .item .menu-btn i{
+    margin-right: 20px;
+}
+.wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+    float: right;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu{
+    background: #3498DB;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s;
+    transition-property: background,max-height;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a{
+    display: block;
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #BFC5E9;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+    background: #55B1F0;
+}
+
+.wrapper .sidebar .sidebar-menu .item .sub-menu i{
+    padding-right: 20px;
+    font-size: 10px;
+}
+
+.wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+    max-height: 500px;
+}
+
+        /**Sidebar design end**/
+        /* Main-container design start */
+.main-container{
+    width: calc(100%-250px); /* .sidebar width is -> 250px */
+    margin-top: 50px;
+    margin-left: 250px;
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.3s;
+}
+        /* Main-container design start */
+        /**Collapse design start**/
+        /**.Collapse class is created by JavaScript**/
+.collapse .sidebar{
+    width: 70px;
+}
+.collapse .sidebar .profile img,
+.collapse .sidebar .profile p,
+.collapse .sidebar a span,
+.collapse .header .header-menu .title-hide{
+    display: none;
+    transition: 0.3s;
+   
+}
+
+.collapse .sidebar .sidebar-menu .item .menu-btn{
+    font-size: 23px;
+}
+
+.collapse .sidebar .sidebar-menu .item .sub-menu{
+    font-size: 18px;
+    padding-left: 3px;
+}
+.collapse .header .header-menu .sidebar-btn{
+    margin-left: 0;
+    color:#000;
+    font-size: 28px;
+}
+.collapse .main-container{
+    
+    width: (100%-70px); /* .header height is -> 70px */
+    margin-left: 70px;
+}
+
+        /**Collapse design end**/
+
+
